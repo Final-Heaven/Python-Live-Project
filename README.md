@@ -153,7 +153,7 @@ def video_game_api(request):
 
 I specified certain fields in the API call to get exactly the information I wanted. I then parsed through the JSON response in order to grab what I was looking for, created a list from those items, zipped them together to keep the data linked, and passed it to the template. Then, I used the Django 'for' tag in order to display the information in a table.
 
-## Web Scraping (Beautiful Soup)
+# Web Scraping (Beautiful Soup)
 I was then given the task to use the Beautiful Soup library to scrape information of my choosing from the web. To stick to the theme, I decided to scrape a list of the [best-selling video games](https://en.wikipedia.org/wiki/List_of_best-selling_video_games) from [Wikipedia](https://www.wikipedia.org/). In order to accomplish this, I made use of the Chrome Developer Tools to find the specific HTML elements I was looking for, and then created the function:
 
 ```
