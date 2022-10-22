@@ -171,4 +171,8 @@ def video_game_beautiful_soup(request):
 After that, it was only a matter of creating the HTML page and accessing the information using `{{ pretty_table | safe }}`. The safe filter was necessary to prevent the raw HTML from being escaped, so the table would display correctly.
 
 # Front End Improvements
-As my time on the Live Project was nearing its end, I made some CSS improvements to the buttons, links, searchbar, and navbar on the site. This included hover effects on certain elements, as well as some minor spacing adjustments.
+As my time on the Live Project was nearing its end, I made some CSS improvements to the buttons, links, searchbar, and navbar on the site. This included hover effects on certain elements, as well as some minor spacing adjustments. Here is an example:
+
+![Navbar Hover Effect](navbar.gif)
+
+Yes
