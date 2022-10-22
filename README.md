@@ -154,4 +154,21 @@ def video_game_api(request):
 I specified certain fields in the API call to get exactly the information I wanted. I then parsed through the JSON response in order to grab what I was looking for, created a list from those items, zipped them together to keep the data linked, and passed it to the template. Then, I used the Django 'for' tag in order to display the information in a table.
 
 ## Web Scraping (Beautiful Soup)
-I was then given the task to use the Beautiful Soup library to scrape information of my choosing from the web. To stick to the theme, I decided to scrape a list of the [best-selling video games](https://en.wikipedia.org/wiki/List_of_best-selling_video_games) from [Wikipedia](https://www.wikipedia.org/). In order to accomplish this, I made use of the Chrome Developer Tools 
+I was then given the task to use the Beautiful Soup library to scrape information of my choosing from the web. To stick to the theme, I decided to scrape a list of the [best-selling video games](https://en.wikipedia.org/wiki/List_of_best-selling_video_games) from [Wikipedia](https://www.wikipedia.org/). In order to accomplish this, I made use of the Chrome Developer Tools to find the specific HTML elements I was looking for, and then created the function:
+
+```
+def video_game_beautiful_soup(request):
+    response = requests.get("https://en.wikipedia.org/wiki/List_of_best-selling_video_games")
+    soup = BeautifulSoup(response.content, 'html.parser')
+    # Gets specific table I'm looking for on the original page
+    table = soup.find_all('table')[1]
+    # Cleans up table formatting
+    pretty_table = table.prettify()
+    content = {"pretty_table": pretty_table}
+    return render(request, "VideoGameReviews/VideoGameReviews_beautiful_soup.html", content)
+```
+
+After that, it was only a matter of creating the HTML page and accessing the information using `{{ pretty_table | safe }}`. The safe filter was necessary to prevent the raw HTML from being escaped, so the table would display correctly.
+
+# Front End Improvements
+As my time on the Live Project was nearing its end, I made some CSS improvements to the buttons, links, searchbar, and navbar on the site. This included hover effects on certain elements, as well as some minor spacing adjustments.
