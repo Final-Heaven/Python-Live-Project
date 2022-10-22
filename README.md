@@ -175,4 +175,5 @@ As my time on the Live Project was nearing its end, I made some CSS improvements
 
 ![Navbar Hover Effect](navbar.gif)
 
-Yes
+# Conclusions/Takeaways
+While I did improve my knowledge of writing code a great deal during the Live Project, I also learned quite a bit outside of that. One of the biggest takeaways for me was learning firsthand that research is a big part of software development. When there were things I didn't immediately know how to do, a bit of internet research went a long way. It also helped me improve, since I had to use critical thinking on what would work with my app and how to implement it for my specific situation. I also got to learn what it was like being part of a development team, and how communication is vital to ensuring things progress smoothly. Before I began the Live Project, I was quite nervous that I wouldn't live up to expectations. However, it was a great learning experience for me, both from a coding standpoint, and from an industry standpoint as well. I greatly appreciate my time spent on the project, as it gave me confidence that I can indeed put together something of value and accomplish tasks on my own.
